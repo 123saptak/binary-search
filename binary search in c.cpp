@@ -1,3 +1,4 @@
+// C program to do Binary Search
 #include <stdio.h>
 
 int binary_Search(int arr[], int l, int row, int element)
@@ -8,6 +9,9 @@ int binary_Search(int arr[], int l, int row, int element)
  if (arr[mid] == element)
  return mid;
 
+
+ if (arr[mid] > element)
+ return binary_Search(arr, l, mid - 1, element);
 
 
  return binary_Search(arr, mid + 1, row, element);
